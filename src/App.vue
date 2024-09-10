@@ -5,6 +5,7 @@ import { ref } from 'vue';
 import { showImagePreview } from 'vant';
 import enUS from 'vant/es/locale/lang/en-US';
 import { Cell, CellGroup } from 'vant';
+import { NavBar } from 'vant';
 
 const showCalendar = ref(false)
 const showPopup = ref(false)
@@ -64,7 +65,7 @@ const onConfirm = (value: Date) => {
         内容 2
       </van-tab>
       <van-tab title="c 3">
-        内容 3
+        Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in.  
       </van-tab>
       <van-tab title="d 4">
         内容 4
@@ -181,7 +182,7 @@ const onConfirm = (value: Date) => {
         <van-cell v-for=" (n, i) in 150" :key="i" :title="n" :value="n" />
       </van-cell-group>
     </van-floating-panel> -->
-
+  
     <van-back-top bottom="70" />
     <van-sticky position="bottom">
       <van-tabbar>
@@ -201,6 +202,14 @@ const onConfirm = (value: Date) => {
     </van-sticky>
   </section>
 </template>
+
+<van-nav-bar
+  title="Title"
+  left-text="Back"
+  left-arrow
+  @click-left="onClickLeft"
+/>
+
 
 <style>
 .my-swipe .van-swipe-item {
